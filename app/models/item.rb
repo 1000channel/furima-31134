@@ -8,6 +8,7 @@ class Item < ApplicationRecord
     validates :shipping_fee_status_id, numericality: { other_than: 0 } 
     validates :prefecture_id, numericality: { other_than: 0 } 
     validates :scheduled_delivery_id, numericality: { other_than: 0 } 
+    validates :price
   end
 
   belongs_to :user
