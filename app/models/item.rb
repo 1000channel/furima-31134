@@ -8,7 +8,8 @@ class Item < ApplicationRecord
     validates :shipping_fee_status_id, numericality: { other_than: 0 } 
     validates :prefecture_id, numericality: { other_than: 0 } 
     validates :scheduled_delivery_id, numericality: { other_than: 0 } 
-    validates :price
+    validates :price, numericality: { only_integer: true, greater_than_or_equal_to: 300,less_than_or_equal_to: 9999999 },
+                      format: { with: /\A[0-9]+\z/ }
   end
 
   belongs_to :user
