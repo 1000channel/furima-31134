@@ -27,9 +27,10 @@
 | info                   | text       | null: false                    |
 | category_id            | integer    | null: false                    |
 | sales_status_id        | integer    | null: false                    |
-| shopping_fee_status_id | integer    | null: false                    |
+| shipping_fee_status_id | integer    | null: false                    |
 | prefecture_id          | integer    | null: false                    |
 | scheduled_delivery_id  | integer    | null: false                    |
+| price                  | integer    | null: false                    |
 | user                   | references | null: false, foreign_key: true |
 
 ### Association
