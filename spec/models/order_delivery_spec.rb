@@ -24,7 +24,7 @@ RSpec.describe OrderDelivery, type: :model do
     it 'prefecture_idが0だと保存できないこと' do
       @order_delivery.prefecture_id = 0
       @order_delivery.valid?
-      expect(@order_delivery.errors.full_messages).to include("Prefecture must be other than 0")
+      expect(@order_delivery.errors.full_messages).to include('Prefecture must be other than 0')
     end
 
     it 'cityが空だと保存できないこと' do
@@ -55,11 +55,10 @@ RSpec.describe OrderDelivery, type: :model do
       expect(@order_delivery.errors.full_messages).to include('Phone number is invalid.')
     end
 
-    it "tokenが空では登録できないこと" do
+    it 'tokenが空では登録できないこと' do
       @order_delivery.token = nil
       @order_delivery.valid?
       expect(@order_delivery.errors.full_messages).to include("Token can't be blank")
     end
-  
   end
 end
